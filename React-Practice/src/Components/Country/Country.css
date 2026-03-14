@@ -1,0 +1,20 @@
+.country{
+    border: 2px solid azure;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     /* box-shadow: 0 4px 15px rgba(241, 241, 241, 0.2); */
+    /* background: linear-gradient(90deg red, blue); */
+}
+.button{
+    padding: 10px 16px;
+    border: 2px solid red;
+    border-radius: 30px;
+    background-color: cornflowerblue;
+
+}
