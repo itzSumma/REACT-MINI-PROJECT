@@ -25,7 +25,7 @@ setVisitedCountries(newVisitedCountries);
 
   return (
     <div>
-     <h1>In the Countries : {countries.length}</h1>
+     <h1>The Countries I Visited : {countries.length}</h1>
      <h2>Total Country You Visited:{visitedCountries.length}</h2>
      <h2>Total Flags Visited: {visitedFlags.length}</h2>
 <ol>
