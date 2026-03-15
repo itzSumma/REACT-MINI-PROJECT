@@ -1,16 +1,43 @@
-# React + Vite
+# Follow Button App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React app I built while learning useState hook.
 
-Currently, two official plugins are available:
+🔗 Live: [follow-button-app.netlify.app](https://follow-button-app.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## What it does
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Click **Follow** → like count goes up + shows a message
+- Click **Unfollow** → like count goes down + shows a message
+- Click **Reset** → everything goes back to 0, message disappears
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## What I used
+
+- React (useState)
+- Vite
+- CSS
+
+---
+
+## Run it locally
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## What I learned
+
+This is my first React project. I built it as a task from my course module.
+
+While building this, I learned how `useState` works:
+
+- `useState` lets you store a value that React watches. When it changes, the UI updates automatically.
+- You can't change state directly like `likes = 5`. You have to use the setter function like `setLikes(5)`.
+- The initial value inside `useState()` is what the variable starts as — `0`, `false`, or `null`.
+- In this project I used three states — one for the like count, one to track follow status, and one to control which message is visible.
