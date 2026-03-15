@@ -3,3 +3,8 @@
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
 }
+.flag-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
