@@ -1,32 +1,54 @@
-import React from 'react';
-import "./Country.css"
-const Country = ({country}) => {
-    console.log(country);
-const handleVisited =()=>{
+import React, { useState } from "react";
+import "./Country.css";
 
-}
+const Country = ({ country, handleVisitedCountries }) => {
+  // console.log(country);
+//   console.log(handleVisitedCountries);
+  const [visited, setVisited] = useState(false);
 
-    return (
-        <div className='country'>
-            <img src={country.flags.flags.png} alt={country.flags.flags.alt} />
-            <h2>Name:{country.name.common}</h2>
-            <h3>Capital:{country.capital.capital}</h3>
-            <h4>Region:{country.region.region}</h4>
-                        <p>Population:{country.population.population}</p>
-            <br />
-            <p>
-                Language: 
-  {country.languages?.languages
-    ? Object.values(country.languages.languages).join(", ")
-    : "No language"}
-</p>
-{/* <p>{Object.values(country.languages?.languages || {}).join(", ")}</p> */}
-<br />
-<p>Area: {country.area.area}  {country.area.area >30000 ?   "Big County": "Small Country" }</p>
-<br />
-<button onClick={handleVisited} className='button'>Not Visited</button>
-        </div>
-    );
+  const handleVisited = () => {
+    // console.log("button clicked")
+    // setVisited(true);
+    // Basic condition
+    if (visited) {
+      setVisited(false);
+    } else {
+      setVisited(true);
+    }
+    // ternary condition
+    // setVisited(visited? false : true)
+    //(!)condition/toggle system
+    // setVisited(!visited)
+
+handleVisitedCountries(country);
+  };
+
+  return (
+    <div className={`country ${visited && "country-visited"}`}>
+      <img src={country.flags.flags.png} alt={country.flags.flags.alt} />
+      <h2>Name:{country.name.common}</h2>
+      <h3>Capital:{country.capital.capital}</h3>
+      <h4>Region:{country.region.region}</h4>
+      <p>Population:{country.population.population}</p>
+      <br />
+      <p>
+        Language:
+        {country.languages?.languages
+          ? Object.values(country.languages.languages).join(", ")
+          : "No language"}
+      </p>
+      {/* <p>{Object.values(country.languages?.languages || {}).join(", ")}</p> */}
+      <br />
+      <p>
+        Area: {country.area.area}{" "}
+        {country.area.area > 30000 ? "Big County" : "Small Country"}
+      </p>
+      <br />
+      <button onClick={handleVisited} className="button">
+        {visited ? "Visited" : " Not Visited"}
+      </button>
+    </div>
+  );
 };
 
 export default Country;
