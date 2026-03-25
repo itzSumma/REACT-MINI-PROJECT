@@ -42,7 +42,7 @@ function App() {
       <p className='text-3xl font-medium text-red-500 mt-5'>Use suggestions</p>
       <button className=' btn btn-primary'>Add</button>
       <br />
-      <button className=' btn btn-primary'>Add Now</button>
+      <button className=' btn btn-soft'>Add Now</button>
     </h1>
     </div>
   )
