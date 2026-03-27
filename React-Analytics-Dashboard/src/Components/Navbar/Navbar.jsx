@@ -12,7 +12,7 @@ const navData = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const links = navData.map((route) => (
-    <li key={route.id} className="mr-10">
+    <li key={route.id} className="lg:mr-10 px-4 hover:bg-amber-400">
       <a href={route.path}>{route.name}</a>
     </li>
   ));
@@ -21,8 +21,8 @@ const Navbar = () => {
       <span className="flex md:hidden" onClick={() => setOpen(!open)}>
         {open ? <X></X> : <Menu></Menu>}
        
-       <ul className= {`md:hidden absolute
-        ${open? 'top-8': 'top-64'} bg-amber-300`}>
+       <ul className= {`md:hidden absolute duration-700
+        ${open? 'top-8': '-top-40'} bg-amber-300`}>
             {links}
             </ul>
         <h3 className="ml-5">My Navbar</h3>
