@@ -17,11 +17,12 @@ const Navbar = () => {
     </li>
   ));
   return (
-    <nav className="flex justify-between px-15">
+    <nav className="flex justify-between px-15 text-black">
       <span className="flex md:hidden" onClick={() => setOpen(!open)}>
         {open ? <X></X> : <Menu></Menu>}
        
-       <ul className="md:hidden">
+       <ul className= {`md:hidden absolute
+        ${open? 'top-8': 'top-64'} bg-amber-300`}>
             {links}
             </ul>
         <h3 className="ml-5">My Navbar</h3>
