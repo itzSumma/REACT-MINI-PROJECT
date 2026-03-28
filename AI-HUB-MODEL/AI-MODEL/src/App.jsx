@@ -33,7 +33,7 @@ console.log(cart)
 <div className="tabs tabs-box justify-center bg-transparent">
   <input type="radio" name="my_tabs_1" className="tab w-30 rounded-full" aria-label="Models" onClick={()=>{setTab("Model")}}
    defaultChecked />
-  <input type="radio" name="my_tabs_1" className="tab rounded-full w-30" aria-label="Cart" onClick={()=>{setTab("Cart")}} />
+  <input type="radio" name="my_tabs_1" className="tab rounded-full w-30" aria-label={`Cart (${cart.length})`} onClick={()=>{setTab("Cart")}} />
   
 </div>
 

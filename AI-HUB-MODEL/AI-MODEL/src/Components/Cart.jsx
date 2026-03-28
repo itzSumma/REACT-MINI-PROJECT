@@ -1,5 +1,7 @@
 import React from "react";
-import {  TiDeleteOutline } from "react-icons/ti";
+import { RxCross2 } from "react-icons/rx";
+import { toast } from "react-toastify";
+
 
 const Cart = ({ cart , setCart}) => {
 //   console.log(cart);
@@ -10,8 +12,18 @@ console.log(totalPrice)
 // Checkout Payment
 const handleCheckout =()=>{
     setCart([])
+    toast.success("Payment completed successfully")
+};
+const handleDelete=(item)=>{
+
+    // console.log(item)
+    const filteredArray = cart.filter(elem => elem.id !== item.id)
+    // console.log(filteredArray)
+    setCart(filteredArray)
+    toast.error("Item remove from cart")
 }
-  return <div className=" p-10">
+
+  return <div className=" p-10 max-w-7xl mx-auto">
     <h2 className="text-2xl font-bold ">Your Cart</h2>
     {
 cart.length === 0 ? <p className="text-2xl font-bold text-center border border-gray-300 p-10 mt-5 bg-zinc-300 rounded-xl"> Your cart is empty</p> : <>
@@ -19,7 +31,7 @@ cart.length === 0 ? <p className="text-2xl font-bold text-center border border-g
     {cart.map(item=> <div className="flex justify-between items-center p-5 border rounded-xl bg-gray-300  " key={item.id}>
     <div className="flex items-center gap-2">
         <div>
-        <img className="h-20 w-20 object-contain" src={item.image} alt={item.name} />
+        <img className="h-20 w-20 object-contain" src={item.image} alt={item.title} />
     </div>
     <div>
         <h2 className="text-xl font-bold">{item.title}</h2> 
@@ -28,7 +40,7 @@ cart.length === 0 ? <p className="text-2xl font-bold text-center border border-g
     </div>
     <div className="flex gap-10">
         <div className="text-2xl font-bold">${item.price}/month</div>
-    <button className="btn btn-error rounded-full"><TiDeleteOutline /></button>
+    <button onClick={()=>handleDelete(item)} className="btn btn-error rounded-full"><RxCross2 /></button>
     </div>
 </div>)}
 </div>
