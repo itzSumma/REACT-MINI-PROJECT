@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "ChatGPT",
+    "description": "Conversational AI for writing, coding, and research.\nHelpful for brainstorming, summaries, and daily tasks.",
+    "price": 0,
+    "image": "https://cdn-icons-png.flaticon.com/512/12222/12222560.png",
+    "status": "popular"
+  },
+  {
+    "id": 2,
+    "title": "Claude",
+    "description": "AI assistant built for thoughtful writing and analysis.\nGreat for long documents, summaries, and deep reasoning.",
+    "price": 0,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Claude_AI_symbol.svg",
+    "status": "favourite"
+  },
+  {
+    "id": 3,
+    "title": "Gemini",
+    "description": "Google AI assistant for writing, answers, and multimodal tasks.\nWorks well for search-style help and productivity.",
+    "price": 0,
+    "image": "https://static.vecteezy.com/system/resources/previews/046/861/646/non_2x/gemini-icon-on-a-transparent-background-free-png.png",
+    "status": "popular"
+  },
+  {
+    "id": 4,
+    "title": "Perplexity",
+    "description": "AI-powered answer engine with cited web results.\nUseful for research, fact-finding, and quick comparisons.",
+    "price": 12,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdFSv1lxsEwowysGSVpPBM_VMwocDGqxqRyg&s",
+    "status": "mostwanted"
+  },
+  {
+    "id": 5,
+    "title": "Microsoft Copilot",
+    "description": "Microsoft's AI assistant for productivity and daily work.\nHelps with writing, search, and office workflows.",
+    "price": 20,
+    "image": "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/copilot-color.png",
+    "status": "popular"
+  },
+  {
+    "id": 6,
+    "title": "GitHub Copilot",
+    "description": "AI coding assistant for autocomplete and code chat.\nSpeeds up development inside editors and IDEs.",
+    "price": 10,
+    "image": "https://images.seeklogo.com/logo-png/42/2/github-copilot-logo-png_seeklogo-428029.png",
+    "status": "favourite"
+  },
+  {
+    "id": 7,
+    "title": "Grammarly",
+    "description": "AI writing tool for grammar, tone, and clarity.\nHelps improve emails, reports, and everyday communication.",
+    "price": 12,
+    "image": "https://images.icon-icons.com/3912/PNG/512/grammarly_logo_icon_248150.png",
+    "status": "popular"
+  },
+  {
+    "id": 8,
+    "title": "Notion AI",
+    "description": "Workspace AI for notes, docs, and summaries.\nUseful for organizing knowledge and team collaboration.",
+    "price": 10,
+    "image": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/notion-icon.png",
+    "status": "mostwanted"
+  },
+  {
+    "id": 9,
+    "title": "Midjourney",
+    "description": "AI image generator for creative visual concepts.\nPopular for artwork, design inspiration, and mockups.",
+    "price": 10,
+    "image": "https://img.icons8.com/?size=96&id=jglvYLOkuYXi&format=png",
+    "status": "popular"
+  },
+  {
+    "id": 10,
+    "title": "Jasper",
+    "description": "AI content platform for marketing and brand writing.\nUseful for campaigns, copywriting, and business content.",
+    "price": 39,
+    "image": "https://img.icons8.com/?size=96&id=ij6f4GUUwLE8&format=png",
+    "status": "favourite"
+  },
+  {
+    "id": 11,
+    "title": "Canva AI",
+    "description": "Design platform with built-in AI tools and generation.\nHelps create social posts, slides, and branded visuals.",
+    "price": 14,
+    "image": "https://vectorseek.com/wp-content/uploads/2025/07/canva-ai-Logo-PNG-SVG-Vector-01.png",
+    "status": "mostwanted"
+  },
+  {
+    "id": 12,
+    "title": "Runway",
+    "description": "Creative AI tool for video editing and media generation.\nUseful for motion design, effects, and content production.",
+    "price": 15,
+    "image": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/runway-ai-icon.png",
+    "status": "popular"
+  }
+]
