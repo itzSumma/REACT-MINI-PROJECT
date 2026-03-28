@@ -1,16 +1,21 @@
 
-
-import './App.css'
+import Navbar from "./Components/Navbar";
+import Banner from "./Components/Banner";
+import Footer from "./Components/Footer";
 
 function App() {
-  
-
   return (
-  <div>
-    <h2 className='text-2xl text-[red]'>Hello</h2>
-    <button className='btn btn-active'>Subscribe</button>
-  </div>
-  )
+    <div>
+      <header className="mx-auto max-w-7xl px-6 py-4 lg:px-12">
+        <Navbar />
+      </header>
+      <main>
+        <Banner />
+        
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
