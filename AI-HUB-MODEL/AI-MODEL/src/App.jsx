@@ -49,7 +49,7 @@ console.log(cart)
         >
          {tab ==="Model" && <Models modelPromise={modelPromise} cart={cart} setCart={setCart}/>}
         </Suspense>
-   { tab === "Cart" && <Cart cart={cart}/>}
+   { tab === "Cart" && <Cart cart={cart} setCart={setCart}/>}
       </main>
       <Footer />
     </div>
