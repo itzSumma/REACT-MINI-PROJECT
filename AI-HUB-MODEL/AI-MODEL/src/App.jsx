@@ -31,9 +31,18 @@ console.log(cart)
 
         {/* Active tab model and cart */}
 <div className="tabs tabs-box justify-center bg-transparent">
-  <input type="radio" name="my_tabs_1" className="tab w-30 rounded-full" aria-label="Models" onClick={()=>{setTab("Model")}}
+  <input type="radio" name="my_tabs_1"
+  className={
+    tab === "Model" ? "tab w-30 rounded-full text-white bg-linear-to-r from-red-600 to-orange-500" : "tab w-30 rounded-full bg-white text-black"
+  }
+   aria-label="Models"
+    onClick={()=>{setTab("Model")}}
    defaultChecked />
-  <input type="radio" name="my_tabs_1" className="tab rounded-full w-30" aria-label={`Cart (${cart.length})`} onClick={()=>{setTab("Cart")}} />
+<input type="radio" name="my_tabs_1" className={tab==="Cart"? "tab rounded-full w-30  text-white bg-linear-to-r from-red-600 to-orange-500" :"tab w-30 rounded-full bg-white text-black"
+
+} 
+  aria-label={`Cart (${cart.length})`}
+   onClick={()=>{setTab("Cart")}} />
   
 </div>
 
