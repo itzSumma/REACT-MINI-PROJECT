@@ -5,7 +5,7 @@ const Banner = () => {
     <section className="relative min-h-[40rem] overflow-hidden px-6 py-16 lg:px-12">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-2">
         <div className="space-y-4">
-          <div className="inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-5 py-2 text-sm font-medium text-red-400">
+          <div className="inline-flex items-center gap-2 rounded-full border border-red-600 bg-red-100 px-5 py-2 text-md font-medium text-red-500">
             ✨ Frontier AI Models
           </div>
 
@@ -40,7 +40,7 @@ const Banner = () => {
         <div className="relative flex justify-center lg:justify-end">
           <div className="relative">
             <img
-              className="relative h-[32rem] w-auto rounded-3xl object-contain drop-shadow-2xl"
+              className="relative h-[32rem] w-auto rounded-3xl object-contain drop-shadow-2xl transition-all duration-700 ease-in-out hover:-translate-y-3 hover:scale-105 hover:drop-shadow-[0_24px_50px_rgba(239,68,68,0.30)]"
               src={BannerImage}
               alt="AI Models Banner"
             />
