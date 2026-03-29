@@ -10,41 +10,54 @@ const getModels = async () => {
   return res.json();
 };
 
-
 function App() {
   // Active tabs made
-  const [tab , setTab]=useState("Model")
+  const [tab, setTab] = useState("Model");
   // console.log(tab)
 
   // Cart items
-  const [cart , setCart] = useState([])
-console.log(cart)
+  const [cart, setCart] = useState([]);
+  console.log(cart);
 
   const modelPromise = getModels();
   return (
     <div>
-      <header className="mx-auto max-w-7xl px-6 py-4 lg:px-12">
+      <header className="sticky top-0 z-20 mx-auto max-w-7xl bg-white/30 px-6 py-1 backdrop-blur-2xl lg:px-12">
         <Navbar />
       </header>
       <main>
         <Banner />
 
         {/* Active tab model and cart */}
-<div className="tabs tabs-box justify-center bg-transparent">
-  <input type="radio" name="my_tabs_1"
-  className={
-    tab === "Model" ? "tab w-30 rounded-full text-white bg-linear-to-r from-red-600 to-orange-500" : "tab w-30 rounded-full bg-white text-black"
-  }
-   aria-label="Models"
-    onClick={()=>{setTab("Model")}}
-   defaultChecked />
-<input type="radio" name="my_tabs_1" className={tab==="Cart"? "tab rounded-full w-30  text-white bg-linear-to-r from-red-600 to-orange-500" :"tab w-30 rounded-full bg-white text-black"
-
-} 
-  aria-label={`Cart (${cart.length})`}
-   onClick={()=>{setTab("Cart")}} />
-  
-</div>
+        <div className="tabs tabs-box justify-center bg-transparent gap-5">
+          <input
+            type="radio"
+            name="my_tabs_1"
+            className={
+              tab === "Model"
+                ? "tab w-30 rounded-full text-white bg-linear-to-r from-red-600 to-orange-500 border border-white/20 shadow-md"
+                : "tab w-30 rounded-full bg-white text-black border border-gray-300"
+            }
+            aria-label="Models"
+            onClick={() => {
+              setTab("Model");
+            }}
+            defaultChecked
+          />
+          <input
+            type="radio"
+            name="my_tabs_1"
+            className={
+              tab === "Cart"
+                ? "tab rounded-full w-30 text-white bg-linear-to-r from-red-600 to-orange-500 border border-white/20 shadow-md"
+                : "tab w-30 rounded-full bg-white text-black border border-gray-300"
+            }
+            aria-label={`Cart (${cart.length})`}
+            onClick={() => {
+              setTab("Cart");
+            }}
+          />
+        </div>
 
         <Suspense
           fallback={
@@ -54,11 +67,12 @@ console.log(cart)
                 Loading models...
               </p>
             </div>
-          }
-        >
-         {tab ==="Model" && <Models modelPromise={modelPromise} cart={cart} setCart={setCart}/>}
+          }>
+          {tab === "Model" && (
+            <Models modelPromise={modelPromise} cart={cart} setCart={setCart} />
+          )}
         </Suspense>
-   { tab === "Cart" && <Cart cart={cart} setCart={setCart}/>}
+        {tab === "Cart" && <Cart cart={cart} setCart={setCart} />}
       </main>
       <Footer />
     </div>

@@ -18,8 +18,8 @@ const ModelCard = ({ model, cart, setCart }) => {
   return (
     <div className="group relative h-full overflow-hidden rounded-xl p-[1.5px] shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl active:-translate-y-2 active:shadow-2xl">
       <div className="absolute inset-0 rounded-xl bg-[conic-gradient(from_180deg_at_50%_50%,#f59e0b_0deg,#ef4444_120deg,#fb7185_240deg,#f59e0b_360deg)] opacity-0 transition-opacity duration-300 group-hover:animate-[spin_4s_linear_infinite] group-hover:opacity-100 group-active:animate-[spin_4s_linear_infinite] group-active:opacity-100" />
-      <div className="relative flex h-full flex-col overflow-hidden rounded-[10px] bg-white">
-        <div className="relative flex h-52 items-center justify-center bg-zinc-200">
+      <div className="relative flex h-full flex-col overflow-hidden rounded-[10px] bg-zinc-200">
+        <div className="relative flex h-52 items-center justify-center ">
           {model.status && (
             <div
               className={`absolute top-5 right-3 rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-wider
@@ -33,7 +33,7 @@ const ModelCard = ({ model, cart, setCart }) => {
             </div>
           )}
           <img
-            className="h-40 w-40 object-contain"
+            className="h-40 w-40 object-contain transform transition-all duration-700 ease-in-out group-hover:-translate-y-1 group-hover:scale-110 group-hover:drop-shadow-[0_12px_24px_rgba(239,68,68,0.35)]"
             src={model.image}
             alt={model.title}
           />
@@ -42,7 +42,7 @@ const ModelCard = ({ model, cart, setCart }) => {
         <div className="flex flex-1 flex-col space-y-4 p-4">
           <h2 className="text-xl font-bold">{model.title}</h2>
           <p className="min-h-[72px] text-zinc-500">{model.description}</p>
-          <div className="text-xl font-bold">${model.price}/month</div>
+          <div className="text-xl font-bold text-red-600">${model.price}/month</div>
 
           <button
             className="btn mt-auto w-full rounded-2xl bg-red-600 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-red-500/30 transition-all hover:bg-red-500"
