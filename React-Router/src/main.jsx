@@ -63,7 +63,8 @@ const router = createBrowserRouter([
         path:"posts/:postId",
         loader:({params})=> fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
         Component:PostDetail
-      }
+      },
+      
     ],
   },
   // {
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
     element: <App></App>,
     // Component:App
   },
+  {
+        path:"*",
+        element:`404 PAGE NOT FOUND `
+      }
 ]);
 createRoot(document.getElementById("root")).render(
   <StrictMode>
