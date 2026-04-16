@@ -9,8 +9,8 @@ const Navbar = () => {
     <li><Link to={"/page-to-read"}  className={({isActive})=>` font-semibold ${isActive ? "text-green-500 border border-green-500 rounded-md" : ""}` }>Page to Read</Link></li>
         </>
   return (
-   
-      <div className="navbar bg-base-100 shadow-sm">
+   <nav className="bg-base-100 shadow-sm">
+      <div className="navbar  container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,7 +47,7 @@ const Navbar = () => {
           <a className="btn btn-info text-white">Sign Up</a>
         </div>
       </div>
-  
+  </nav>
   );
 };
 
