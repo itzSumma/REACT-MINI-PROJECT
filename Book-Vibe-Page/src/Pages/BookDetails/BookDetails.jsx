@@ -42,11 +42,11 @@ const BookDetails = () => {
         </figure>
 
         <div className="card-body lg:w-2/3">
-          <p className="text-sm font-semibold uppercase tracking-wider text-green-600">
+          <p className="text-sm font-semibold uppercase tracking-wider text-green-700">
             {category}
           </p>
           <h1 className="text-3xl font-bold">{bookName}</h1>
-          <p className="text-lg text-gray-600">By : {author}</p>
+          <p className="text-lg text-gray-700">By : {author}</p>
 
           <div className="divider my-1" />
 
@@ -70,9 +70,9 @@ const BookDetails = () => {
 
           <div className="divider my-1" />
 
-          <div className="grid gap-3 text-sm md:grid-cols-2 md:text-base">
+          <div className="grid gap-3 text-md md:grid-cols-2 md:text-md">
             <p>
-              <span className="font-semibold text-gray-500">Number of Pages:</span>{" "}
+              <span className="font-semibold text-gray-500">Number of Pages: </span>{" "}
               {totalPages}
             </p>
             <p>
